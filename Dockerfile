@@ -9,3 +9,7 @@ RUN                   pip3 install --user --no-cache-dir -r requirements.txt
 ENV                   PATH=/home/roboshop/.local/bin:$PATH
 ENTRYPOINT           ["uwsgi", "--ini", "payment.ini"]
 
+
+#  here -m means /home/roboshop
+# $PATH search "uwsgi" in /home/roboshop/.local/bin
+
