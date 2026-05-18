@@ -1,0 +1,11 @@
+on:
+  push:
+    branches: ["main"]
+    workflow_dispatch:
+jobs:
+  call-workflow-passing-data:
+    uses: pdevops87/reusable-github-actions/.github/workflows/ci.yml@main
+    with:
+      appName: payment
+      apptype: uwsgi
+    secrets: inherit
